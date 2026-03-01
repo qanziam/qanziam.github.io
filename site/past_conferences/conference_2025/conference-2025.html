@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025 QANZIAM Conference - ANZIAM Queensland Branch</title>
+  <meta name="description" content="The 2025 QANZIAM Conference was held on 3 June at the Queensland University of Technology, Gardens Point campus, with 93 attendees.">
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :target { scroll-margin-top: 5rem; }
+    .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+    .card-hover:hover { transform: translateY(-2px); box-shadow: 0 8px 25px -5px rgba(0,0,0,0.15); }
+    #mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; }
+    #mobile-menu.hidden { max-height: 0; opacity: 0; overflow: hidden; }
+    #mobile-menu:not(.hidden) { max-height: 500px; opacity: 1; }
+
+    /* Schedule table: horizontal scroll on mobile */
+    .schedule-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .schedule-wrap table { min-width: 700px; }
+
+    /* Abstract expand/collapse */
+    details summary { cursor: pointer; }
+    details summary::-webkit-details-marker { display: none; }
+    details[open] summary .chevron { transform: rotate(90deg); }
+    .chevron { transition: transform 0.2s; }
+  </style>
+</head>
+
+<body class="font-sans text-gray-800 bg-white">
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="../../index.html" class="flex items-center gap-3 shrink-0">
+          <img src="../../assets/logo-icon.svg" alt="QANZIAM" class="h-10 w-10">
+          <div class="hidden sm:block">
+            <span class="font-bold text-sky-900 text-lg leading-tight block">QANZIAM</span>
+            <span class="text-xs text-sky-700">Queensland Branch</span>
+          </div>
+        </a>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="../../index.html" class="px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50 transition">Home</a>
+          <a href="../../index.html#about" class="px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50 transition">About</a>
+          <a href="../../index.html#events" class="px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50 transition">Events</a>
+          <a href="../../index.html#committee" class="px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50 transition">Committee</a>
+          <a href="../../index.html#connect" class="px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50 transition">Connect</a>
+        </div>
+        <button id="menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition" aria-label="Toggle menu">
+          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <a href="../../index.html" class="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50">Home</a>
+        <a href="../../index.html#about" class="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50">About</a>
+        <a href="../../index.html#events" class="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50">Events</a>
+        <a href="../../index.html#committee" class="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50">Committee</a>
+        <a href="../../index.html#connect" class="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50">Connect</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <header class="relative bg-sky-900 text-white pt-28 pb-16 sm:pt-36 sm:pb-20 overflow-hidden">
+    <!-- Background image -->
+    <div class="absolute inset-0">
+      <img src="QUT_CC_Chris_Olszewski.jpeg" alt="QUT Gardens Point campus" class="w-full h-full object-cover opacity-25">
+    </div>
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+      <a href="../../index.html#events" class="inline-flex items-center text-sky-300 hover:text-sky-200 text-sm mb-4 transition">
+        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Back to all events
+      </a>
+      <div class="flex flex-wrap items-center gap-3 mb-4">
+        <span class="inline-block px-3 py-1 text-xs font-semibold bg-white/15 text-sky-200 rounded-full">Past Conference</span>
+        <span class="inline-block px-3 py-1 text-xs font-semibold bg-emerald-500/20 text-emerald-300 rounded-full">93 attendees</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-4">
+        2025 QANZIAM Conference
+      </h1>
+      <p class="text-xl text-sky-200 mb-6 max-w-2xl">
+        Held on 3 June 2025 at Queensland University of Technology, Gardens Point campus.
+      </p>
+
+      <!-- Key details -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl">
+        <div class="flex items-center gap-3 bg-white/10 backdrop-blur rounded-xl px-4 py-3">
+          <svg class="w-6 h-6 text-sky-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          <div>
+            <div class="text-xs text-sky-300">Date</div>
+            <div class="font-semibold text-white">3 June 2025</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 bg-white/10 backdrop-blur rounded-xl px-4 py-3">
+          <svg class="w-6 h-6 text-sky-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <div>
+            <div class="text-xs text-sky-300">Venue</div>
+            <div class="font-semibold text-white">QUT Gardens Point</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 bg-white/10 backdrop-blur rounded-xl px-4 py-3">
+          <svg class="w-6 h-6 text-sky-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          <div>
+            <div class="text-xs text-sky-300">Attendees</div>
+            <div class="font-semibold text-white">93</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jump links -->
+      <div class="flex flex-wrap gap-2 mt-6 text-sm">
+        <a href="#organisers" class="px-3 py-1.5 bg-white/10 hover:bg-white/20 rounded-lg transition">Organisers</a>
+        <a href="#schedule" class="px-3 py-1.5 bg-white/10 hover:bg-white/20 rounded-lg transition">Schedule</a>
+        <a href="#keynotes" class="px-3 py-1.5 bg-white/10 hover:bg-white/20 rounded-lg transition">Keynotes</a>
+        <a href="#abstracts" class="px-3 py-1.5 bg-white/10 hover:bg-white/20 rounded-lg transition">Abstracts</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== INTRO ==================== -->
+  <section class="py-12 sm:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-gray-600 text-lg leading-relaxed space-y-4">
+        <p>
+          We had a very successful day with <strong class="text-gray-900">93 attendees</strong> in total,
+          most of whom were HDR students presenting their research work.
+          We thank all presenters and attendees,
+          including keynote speakers <strong class="text-gray-900">Professor Emma McBryde</strong> and <strong class="text-gray-900">Dr Nadiah Kristensen</strong>,
+          and the organisers below.
+        </p>
+        <p>
+          A very big thank you to <strong class="text-gray-900">ANZIAM</strong> for funding the 2025 QANZIAM conference,
+          which enabled us to run the conference without a registration fee.
+          We also thank <strong class="text-gray-900">Queensland University of Technology</strong> for hosting and
+          donating the use of the rooms.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ORGANISERS ==================== -->
+  <section id="organisers" class="py-12 sm:py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl font-bold text-sky-900 mb-8">Organisers</h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm card-hover">
+          <div class="flex items-center gap-4 p-5">
+            <img src="Zachary_Wegert.jpg" alt="Zachary Wegert" class="w-16 h-16 rounded-full object-cover bg-sky-100 shrink-0">
+            <div>
+              <h3 class="font-bold text-gray-900">Zachary Wegert</h3>
+              <p class="text-sm text-sky-700">QUT</p>
+              <p class="text-xs text-gray-500">QANZIAM Treasurer</p>
+            </div>
+          </div>
+          <div class="px-5 pb-5">
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 bg-sky-400 rounded-full mt-[7px] shrink-0"></span>Conference booklet</li>
+              <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 bg-sky-400 rounded-full mt-[7px] shrink-0"></span>Organised parallel sessions</li>
+              <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 bg-sky-400 rounded-full mt-[7px] shrink-0"></span>Welcome desk</li>
+              <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 bg-sky-400 rounded-full mt-[7px] shrink-0"></span>Catering help</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm card-hover">
+          <div class="flex items-center gap-4 p-5">
+            <img src="Shahak_Kuba.png" alt="Shahak Kuba" class="w-16 h-16 rounded-full object-cover bg-sky-100 shrink-0">
+            <div>
+              <h3 class="font-bold text-gray-900">Shahak Kuba</h3>
+              <p class="text-sm text-sky-700">QUT</p>
+              <p class="text-xs text-gray-500">QANZIAM Ordinary Member</p>
+            </div>
+          </div>
+          <div class="px-5 pb-5">
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 bg-sky-400 rounded-full mt-[7px] shrink-0"></span>Finding and inviting keynote speakers</li>
+              <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 bg-sky-400 rounded-full mt-[7px] shrink-0"></span>Catering order</li>
+              <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 bg-sky-400 rounded-full mt-[7px] shrink-0"></span>Organising catering on the day</li>
+              <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 bg-sky-400 rounded-full mt-[7px] shrink-0"></span>Groceries, transporting of coffee urns</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm card-hover">
+          <div class="flex items-center gap-4 p-5">
+            <img src="Llewyn_Randall.jpg" alt="Llewyn Randall" class="w-16 h-16 rounded-full object-cover bg-sky-100 shrink-0">
+            <div>
+              <h3 class="font-bold text-gray-900">Llewyn Randall</h3>
+              <p class="text-sm text-sky-700">Griffith University</p>
+            </div>
+          </div>
+          <div class="px-5 pb-5">
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 bg-sky-400 rounded-full mt-[7px] shrink-0"></span>Planning</li>
+              <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 bg-sky-400 rounded-full mt-[7px] shrink-0"></span>Learning about conference organising in preparation for next year</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm card-hover">
+          <div class="flex items-center gap-4 p-5">
+            <img src="David_Harman.png" alt="David Harman" class="w-16 h-16 rounded-full object-cover bg-sky-100 shrink-0">
+            <div>
+              <h3 class="font-bold text-gray-900">David Harman</h3>
+              <p class="text-sm text-sky-700">Griffith University</p>
+              <p class="text-xs text-gray-500">QANZIAM Chair</p>
+            </div>
+          </div>
+          <div class="px-5 pb-5">
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 bg-sky-400 rounded-full mt-[7px] shrink-0"></span>Room booking</li>
+              <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 bg-sky-400 rounded-full mt-[7px] shrink-0"></span>Finding and inviting judges for student prizes</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm card-hover">
+          <div class="flex items-center gap-4 p-5">
+            <img src="David_Warne.jpg" alt="David Warne" class="w-16 h-16 rounded-full object-cover bg-sky-100 shrink-0">
+            <div>
+              <h3 class="font-bold text-gray-900">David Warne</h3>
+              <p class="text-sm text-sky-700">QUT</p>
+            </div>
+          </div>
+          <div class="px-5 pb-5">
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 bg-sky-400 rounded-full mt-[7px] shrink-0"></span>Finding and inviting keynote speakers</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SCHEDULE ==================== -->
+  <section id="schedule" class="py-12 sm:py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl font-bold text-sky-900 mb-2">Schedule</h2>
+      <p class="text-sm text-gray-500 mb-6">Three parallel sessions ran throughout the day. Scroll horizontally on mobile to see all sessions.</p>
+
+      <div class="schedule-wrap rounded-2xl border border-gray-200 bg-white shadow-sm">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-sky-900 text-white text-left">
+              <th class="px-4 py-3 font-semibold whitespace-nowrap rounded-tl-2xl">Time</th>
+              <th class="px-4 py-3 font-semibold">GP-S-310 (Room 310)</th>
+              <th class="px-4 py-3 font-semibold">GP-S-308 (Room 308)</th>
+              <th class="px-4 py-3 font-semibold rounded-tr-2xl">GP-S-309 (Room 309)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <!-- Full-width rows: bg-sky-50 -->
+            <tr class="bg-sky-50">
+              <td class="px-4 py-3 font-medium text-sky-800 whitespace-nowrap">08:30 &ndash; 09:00</td>
+              <td class="px-4 py-3 text-sky-800 font-medium" colspan="3">Registration</td>
+            </tr>
+            <tr class="bg-sky-50">
+              <td class="px-4 py-3 font-medium text-sky-800 whitespace-nowrap">09:00 &ndash; 09:20</td>
+              <td class="px-4 py-3 text-sky-800" colspan="3">Welcome &ndash; Conference officially opened by <strong>Professor Anthony P Roberts</strong>, Head of School of Mathematical Sciences, QUT</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="px-4 py-2 text-gray-400 whitespace-nowrap">09:20 &ndash; 09:30</td>
+              <td class="px-4 py-2 text-gray-400 italic" colspan="3">Break to move to parallel sessions</td>
+            </tr>
+
+            <!-- Session chairs -->
+            <tr class="bg-gray-50">
+              <td class="px-4 py-2"></td>
+              <td class="px-4 py-2 text-xs text-gray-500 italic">Chair: Tim Moroney</td>
+              <td class="px-4 py-2 text-xs text-gray-500 italic">Chair: Zachary J Wegert</td>
+              <td class="px-4 py-2 text-xs text-gray-500 italic">Chair: Scott McCue</td>
+            </tr>
+
+            <!-- Parallel session 1 -->
+            <tr>
+              <td class="px-4 py-3 text-gray-500 whitespace-nowrap align-top">09:30 &ndash; 09:50</td>
+              <td class="px-4 py-3"><strong>Connor Mallon</strong><br><span class="text-gray-600">Topology Optimisation of Piezoresistive materials</span></td>
+              <td class="px-4 py-3"><strong>Stephen Sanderson</strong><br><span class="text-gray-600">Prediction of nonequilibrium response from equilibrium dynamics</span></td>
+              <td class="px-4 py-3"><strong>Haoyu Wang</strong><br><span class="text-gray-600">Contraction into disjoint clusters in an active gel model for actomyosin networks</span></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 text-gray-500 whitespace-nowrap align-top">09:50 &ndash; 10:10</td>
+              <td class="px-4 py-3"><strong>Nina Rynne</strong><br><span class="text-gray-600">Optimal Control Modelling of Carbon Abatement Strategies</span></td>
+              <td class="px-4 py-3"><strong>Luke Filippini</strong><br><span class="text-gray-600">Analysis of transition probabilities for stochastic models of anisotropic diffusion</span></td>
+              <td class="px-4 py-3"><strong>Jordan Holdorf</strong><br><span class="text-gray-600">A Spatio-Temporal Framework for Financially Viable Restoration Under Climate Uncertainty</span></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 text-gray-500 whitespace-nowrap align-top">10:10 &ndash; 10:30</td>
+              <td class="px-4 py-3"><strong>Llewyn Randall</strong><br><span class="text-gray-600">Amphitheatre gully erosion modelled with coupled hydrology and sediment transport</span></td>
+              <td class="px-4 py-3"><strong>Obi Carwood</strong><br><span class="text-gray-600">Mathematical Modelling of Drug Release from Functionally-Graded-Delivery Systems</span></td>
+              <td class="px-4 py-3"><strong>Grace Burtenshaw</strong><br><span class="text-gray-600">Extreme Value Modelling and Risk Assessment of a Non-Stationary Timeseries</span></td>
+            </tr>
+
+            <!-- Morning tea -->
+            <tr class="bg-amber-50">
+              <td class="px-4 py-3 font-medium text-amber-800 whitespace-nowrap">10:30 &ndash; 11:00</td>
+              <td class="px-4 py-3 text-amber-800 font-medium" colspan="3">Morning Tea</td>
+            </tr>
+
+            <!-- Session chairs -->
+            <tr class="bg-gray-50">
+              <td class="px-4 py-2"></td>
+              <td class="px-4 py-2 text-xs text-gray-500 italic">Chair: Pascal Buenzli</td>
+              <td class="px-4 py-2 text-xs text-gray-500 italic">Chair: David Warne</td>
+              <td class="px-4 py-2 text-xs text-gray-500 italic">Chair: Hilary Hunt</td>
+            </tr>
+
+            <!-- Parallel session 2 -->
+            <tr>
+              <td class="px-4 py-3 text-gray-500 whitespace-nowrap align-top">11:00 &ndash; 11:20</td>
+              <td class="px-4 py-3"><strong>Shahak Kuba</strong><br><span class="text-gray-600">Bones, why is their growth so wacky?</span></td>
+              <td class="px-4 py-3"><strong>S M Erfanul Kabir Chowdhury</strong><br><span class="text-gray-600">A sub-diffusive approach to diffusion MRI in white matter</span></td>
+              <td class="px-4 py-3"><strong>Sarah Vollert</strong><br><span class="text-gray-600">Calibrating ecosystem models when data is scarce</span></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 text-gray-500 whitespace-nowrap align-top">11:20 &ndash; 11:40</td>
+              <td class="px-4 py-3"><strong>Mason Lacy</strong><br><span class="text-gray-600">Importance of spatial arrangement and growth factor secretion for T cell expansion</span></td>
+              <td class="px-4 py-3"><strong>Sishou Zhou</strong><br><span class="text-gray-600">Improving sub-diffusion dMRI model parameter estimation using PINNs</span></td>
+              <td class="px-4 py-3"><strong>Sithara Wijekoon</strong><br><span class="text-gray-600">Missing Data Imputation Based on Conditional Sampling from Vine Copulas</span></td>
+            </tr>
+
+            <tr class="bg-gray-50">
+              <td class="px-4 py-2 text-gray-400 whitespace-nowrap">11:40 &ndash; 11:50</td>
+              <td class="px-4 py-2 text-gray-400 italic" colspan="3">Break to move to keynote</td>
+            </tr>
+
+            <!-- Keynote 1 -->
+            <tr class="bg-sky-50">
+              <td class="px-4 py-3 font-medium text-sky-800 whitespace-nowrap">11:50 &ndash; 12:40</td>
+              <td class="px-4 py-3 text-sky-800" colspan="3"><span class="inline-block px-2 py-0.5 text-xs font-semibold bg-sky-200 text-sky-900 rounded mr-2">Keynote</span><strong>Emma McBryde</strong> &ndash; Modelling infectious diseases to inform policy and clinical trials</td>
+            </tr>
+
+            <!-- Lunch -->
+            <tr class="bg-amber-50">
+              <td class="px-4 py-3 font-medium text-amber-800 whitespace-nowrap">12:40 &ndash; 13:40</td>
+              <td class="px-4 py-3 text-amber-800 font-medium" colspan="3">Lunch</td>
+            </tr>
+
+            <!-- Session chair -->
+            <tr class="bg-gray-50">
+              <td class="px-4 py-2"></td>
+              <td class="px-4 py-2 text-xs text-gray-500 italic" colspan="3">Chair: Jessica Crawshaw</td>
+            </tr>
+
+            <!-- Keynote 2 -->
+            <tr class="bg-sky-50">
+              <td class="px-4 py-3 font-medium text-sky-800 whitespace-nowrap">13:40 &ndash; 14:30</td>
+              <td class="px-4 py-3 text-sky-800" colspan="3"><span class="inline-block px-2 py-0.5 text-xs font-semibold bg-sky-200 text-sky-900 rounded mr-2">Keynote</span><strong>Nadiah Kristensen</strong> &ndash; The evolution of human cooperation: homophily, non-additive benefits, and higher-order relatedness</td>
+            </tr>
+
+            <tr class="bg-gray-50">
+              <td class="px-4 py-2 text-gray-400 whitespace-nowrap">14:30 &ndash; 14:40</td>
+              <td class="px-4 py-2 text-gray-400 italic" colspan="3">Break to move to parallel sessions</td>
+            </tr>
+
+            <!-- Session chairs -->
+            <tr class="bg-gray-50">
+              <td class="px-4 py-2"></td>
+              <td class="px-4 py-2 text-xs text-gray-500 italic">Chair: Shahak Kuba</td>
+              <td class="px-4 py-2 text-xs text-gray-500 italic">Chair: Patrick Grant</td>
+              <td class="px-4 py-2 text-xs text-gray-500 italic">Chair: Stephen Sanderson</td>
+            </tr>
+
+            <!-- Parallel session 3 -->
+            <tr>
+              <td class="px-4 py-3 text-gray-500 whitespace-nowrap align-top">14:40 &ndash; 15:00</td>
+              <td class="px-4 py-3"><strong>Riley Whebell</strong><br><span class="text-gray-600">Image-based homogenisation for a multiscale model of sugarcane bagasse pretreatment</span></td>
+              <td class="px-4 py-3"><strong>Jonathan Wilton</strong><br><span class="text-gray-600">Robust Loss Functions for Training Decision Tree Classifiers with Noisy Labels</span></td>
+              <td class="px-4 py-3"><strong>Eliza Domann</strong><br><span class="text-gray-600">Parameter identifiability in a complex dynamic model of climate change effects on algal blooms</span></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 text-gray-500 whitespace-nowrap align-top">15:00 &ndash; 15:20</td>
+              <td class="px-4 py-3"><strong>Mitchell Griggs</strong><br><span class="text-gray-600">Simulating Higher-Order Solutions for Stochastic Equations with Indivisible Delays</span></td>
+              <td class="px-4 py-3"><strong>Hao Zhou</strong><br><span class="text-gray-600">Data-Driven Neural Network Methods for Portfolio Diversification</span></td>
+              <td class="px-4 py-3"><strong>Dasuni Amanda Salpadoru</strong><br><span class="text-gray-600">Parameter estimation and identifiability analysis of bistable ecosystem</span></td>
+            </tr>
+
+            <!-- Afternoon tea -->
+            <tr class="bg-amber-50">
+              <td class="px-4 py-3 font-medium text-amber-800 whitespace-nowrap">15:20 &ndash; 15:50</td>
+              <td class="px-4 py-3 text-amber-800 font-medium" colspan="3">Afternoon Tea</td>
+            </tr>
+
+            <!-- Session chairs -->
+            <tr class="bg-gray-50">
+              <td class="px-4 py-2"></td>
+              <td class="px-4 py-2 text-xs text-gray-500 italic">Chair: Shahak Kuba</td>
+              <td class="px-4 py-2 text-xs text-gray-500 italic">Chair: Riley Whebell</td>
+              <td class="px-4 py-2 text-xs text-gray-500 italic">Chair: Llewyn Randall</td>
+            </tr>
+
+            <!-- Parallel session 4 -->
+            <tr>
+              <td class="px-4 py-3 text-gray-500 whitespace-nowrap align-top">15:50 &ndash; 16:10</td>
+              <td class="px-4 py-3"><strong>Ryan Kelly</strong><br><span class="text-gray-600">Misspecification-robust methods for SBI</span></td>
+              <td class="px-4 py-3"><strong>Chang Chen</strong><br><span class="text-gray-600">Optimal Asset Allocation with Quadratic Variation as a Risk Measure</span></td>
+              <td class="px-4 py-3"><strong>Jamintha Samarakoon</strong><br><span class="text-gray-600">Adaptive Simulated Annealing for Autonomous Labour Market Delimitation</span></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 text-gray-500 whitespace-nowrap align-top">16:10 &ndash; 16:30</td>
+              <td class="px-4 py-3"><strong>Patrick Grant</strong><br><span class="text-gray-600">Modelling Moisture Migration and Swelling in Engineered Wood Products</span></td>
+              <td class="px-4 py-3"><strong>Anuradha Dewage</strong><br><span class="text-gray-600">Using Explainable AI for Conservation Decision Making</span></td>
+              <td class="px-4 py-3"><strong>Adel Mehrpooya</strong><br><span class="text-gray-600">A simple model of osteocyte network control in bone mechanical adaptation</span></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 text-gray-500 whitespace-nowrap align-top">16:30 &ndash; 16:50</td>
+              <td class="px-4 py-3"><strong>Renee Oldfield</strong><br><span class="text-gray-600">Average entropy for random Blaschke products</span></td>
+              <td class="px-4 py-3"><strong>Alistair Falconer</strong><br><span class="text-gray-600">De novo pattern formation in hydra spheroids</span></td>
+              <td class="px-4 py-3"><strong>Joshua Peters</strong><br><span class="text-gray-600">Jumping for diffusion in random metastable systems</span></td>
+            </tr>
+
+            <!-- Close -->
+            <tr class="bg-sky-50">
+              <td class="px-4 py-3 font-medium text-sky-800 whitespace-nowrap rounded-bl-2xl">16:50 &ndash; 17:10</td>
+              <td class="px-4 py-3 text-sky-800 font-medium rounded-br-2xl" colspan="3">Close of conference</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== KEYNOTES ==================== -->
+  <section id="keynotes" class="py-12 sm:py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl font-bold text-sky-900 mb-8">Invited Speakers</h2>
+
+      <div class="space-y-6">
+        <!-- McBryde -->
+        <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm">
+          <div class="flex flex-col sm:flex-row gap-5 mb-4">
+            <img src="Emma_McBryde.png" alt="Emma McBryde" class="w-24 h-24 sm:w-28 sm:h-28 rounded-xl object-cover bg-sky-100 shrink-0">
+            <div>
+              <span class="inline-block px-2.5 py-0.5 text-xs font-semibold bg-sky-100 text-sky-800 rounded mb-2">Keynote</span>
+              <h3 class="text-xl font-bold text-gray-900 mb-1">Modelling infectious diseases to inform policy and clinical trials</h3>
+              <p class="text-sky-700 font-medium">Emma McBryde</p>
+              <p class="text-sm text-gray-500">Collaborators: Michael Meehan, Claire Brereton, Alec Henderson</p>
+              <p class="text-sm text-gray-500">University of Queensland</p>
+            </div>
+          </div>
+          <p class="text-gray-600 leading-relaxed">Infectious diseases continue to be a scourge on the world. COVID-19 reminded us of the profound impact infections have had on humanity. Tuberculosis continues to kill over 1 million people per year. In this talk I will describe a number of projects that illustrate the current mathematical and statistical methods used at the interface of data analysis, simulation and public health action.</p>
+        </div>
+
+        <!-- Kristensen -->
+        <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm">
+          <div class="flex flex-col sm:flex-row gap-5 mb-4">
+            <img src="Nadiah_Kristensen.png" alt="Nadiah Kristensen" class="w-24 h-24 sm:w-28 sm:h-28 rounded-xl object-cover bg-sky-100 shrink-0">
+            <div>
+              <span class="inline-block px-2.5 py-0.5 text-xs font-semibold bg-sky-100 text-sky-800 rounded mb-2">Keynote</span>
+              <h3 class="text-xl font-bold text-gray-900 mb-1">The evolution of human cooperation: homophily, non-additive benefits, and higher-order relatedness</h3>
+              <p class="text-sky-700 font-medium">Nadiah Kristensen</p>
+              <p class="text-sm text-gray-500">Queensland University of Technology</p>
+            </div>
+          </div>
+          <p class="text-gray-600 leading-relaxed mb-4">We humans are intrinsically moral beings driven towards pro-social and cooperative behaviour, a characteristic that seems to contradict the selfishness implied by a Darwinian "survival of the fittest" perspective. This apparent paradox raises fundamental questions: how do people cooperate, and how did cooperation first arise? In this talk, I examine two key factors that may explain the evolution of cooperation: homophily and non-additive benefits. Homophily is the tendency to form groups with similar others, and it was likely a significant factor promoting cooperative behaviour in our early hominin ancestors. Simultaneously, cooperation can be sustained in situations where the benefit from many cooperators working together differs from the additive sum they would have accrued working individually. However, significant mathematical challenges emerge when combining these factors -- understanding interactions among related individuals in games with non-additive benefits. I will first introduce these problems and explain how they have been solved in simpler cases, then progressively address the more complex scenarios. The talk will introduce higher-order relatedness concepts as analytical tools, and explore case studies that may illuminate how we evolved into the exceptionally cooperative and successful species we are today.</p>
+          <div class="border-t border-gray-100 pt-4">
+            <p class="text-sm text-gray-500"><strong class="text-gray-700">Bio:</strong> Nadiah Kristensen is a postdoctoral fellow in the School of Mathematical Sciences at QUT. Her academic journey has taken her through universities in Singapore, Switzerland, Japan, and Sweden, where she has worked on theoretical models in evolution and ecology. Her interests include macro-ecology, population dynamics, eco-evolutionary models (adaptive dynamics), and most recently, evolutionary game theory.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TALK ABSTRACTS ==================== -->
+  <section id="abstracts" class="py-12 sm:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl font-bold text-sky-900 mb-2">Talk Abstracts</h2>
+      <p class="text-gray-500 text-sm mb-8">All abstracts in alphabetical order by first name. Click to expand.</p>
+
+      <div class="space-y-3">
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Adel Mehrpooya</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">A simple model of osteocyte network control in bone mechanical adaptation</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Supervisors/Collaborators: Dr. Pascal Buenzli, Dr. Vivien Challis, Dr. Nathalie Bock &bull; QUT</p>
+            <p>Mechanical stimulation of bone tissue significantly influences signal transmission within the osteocyte network and at the bone surface, thereby driving processes of bone adaptation and remodeling. Accurate understanding and quantifying of this mechanism, governed by the reaction-diffusion of signals across the osteocyte network, are crucial for investigating the role of mechanical forces in cellular responses and regulation of bone formation and resorption. This paper extends a deterministic random walk model, originally designed for reaction-diffusion in a 1D network with fixed boundaries, to a dynamic 1D osteocyte network coupled with mechanical adaptation. By quantifying flux at the network boundaries, we examine the osteoblast and osteoclast responses to mechanical loading. Simulation results show that a model simulating bone remodeling as a gradual process better captures the slower, time-dependent behavior of osteoblasts and osteoclasts, compared to rapid remodeling models.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Alistair Falconer</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">De novo pattern formation in hydra spheroids</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Collaborator: Dietmar Oelz &bull; UQ</p>
+            <p>Hydra is a freshwater organism with remarkable regenerative capacity -- after injuries such as amputation, bisection or even disassociation at the cellular level a hydra is capable of regenerating to a functional organism within days. A feature of this regeneration is that the tissue will self-assemble into a homogeneous sphere, which then polarises along a body axis after undergoing mechanical stimulation. In this talk we present a simulation study exploring our mechano-chemical model, wherein the surface on which the pattern forms plays a dynamic role in the process.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Anuradha Dewage</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Using Explainable AI for Conservation Decision Making</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Supervisors: Dr David Warne, Assoc Prof Helen Thompson, Dr Julie Vercelloni &bull; QUT</p>
+            <p>Machine learning is increasingly being used in species distribution models to improve predictive accuracy, yet its lack of explainability remains a key challenge for ecological applications. Using SHAP, we demonstrate the inconsistencies of different machine learning techniques in terms of their local and global explainability. We aim to develop a framework for identifying differences across explainability of machine learning models, which can be particularly beneficial in conservation decision making.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Chang Chen</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Optimal Asset Allocation with Quadratic Variation as a Risk Measure</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Supervisor: Duy-Minh Dang &bull; UQ</p>
+            <p>We determine the optimal decumulation strategy for defined contribution pension plans, with an Annually Recalculated Virtual Annuity spending rule. Our objective is to maximize expected total withdrawals and minimize quadratic variation, providing investors with better control over risk throughout the investment horizon. We propose a data-driven Neural Network approach to determine the optimal allocation, incorporating realistic constraints such as no leverage and discrete rebalancing.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Connor Mallon</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Topology Optimisation of Piezoresistive materials</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Collaborators: Zachary Wegert, Vivien Challis &bull; QUT</p>
+            <p>We perform topology optimisation of self-sensing grippers. This work introduces, for the first time, an objective term for recoverability into the topology optimisation formulation for compliant mechanisms. We consider a coupled structural and electrical multiphysics model and adopt a level-set topology optimisation approach that is particularly well-suited to the given problem by exploiting bespoke machinery developed in the Julia software package GridapTopOpt.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Dasuni Amanda Salpadoru</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Parameter estimation and identifiability analysis of bistable ecosystem</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Supervisors: Dr David Warne, Dr Matthew Adams, Assoc Prof Kate Helmstedt &bull; QUT</p>
+            <p>We use a profile likelihood approach, which is well-suited for assessing parameter identifiability by quantifying uncertainty and detecting potential non-identifiability issues. This method is applied to estimate parameters and analyse the practical identifiability of key parameters and critical thresholds for the Carpenter Lake eutrophication model in a range of different monitoring scenarios.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Eliza Domann</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Parameter identifiability in a complex dynamic model of climate change effects on algal blooms</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Supervisors: Dr Matthew Adams, Prof Chris Drovandi, Dr Gloria M. Monsalve-Bravo (UQ) &bull; QUT</p>
+            <p>Microcystis blooms pose a myriad of risks to human and animal health, and the environment. A group of ecologists have been developing a mathematical model to describe the dynamic changes in the growth of Microcystis. Although further research has been undertaken, in-depth global or semi-global sensitivity analysis has yet to be performed. Conducting a sensitivity analysis could provide deeper insights into parameter relationships and identify gaps in the current data.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Grace Burtenshaw</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Extreme Value Modelling and Risk Assessment of a Non-Stationary Timeseries</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Supervisors: Dr Meagan Carney, Dr Joe Lane &bull; UQ</p>
+            <p>As the Australian energy market increases its circulation of renewable energy, extreme weather events increasingly disrupt supply. My project aims to develop a statistical tool using classical extreme value modelling techniques to provide the means for improved forecasting and estimations of extremes in a non-stationary setting.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Hao Zhou</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Data-Driven Neural Network Methods for Portfolio Diversification</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Supervisor: Dr. Duy-Minh Dang &bull; UQ</p>
+            <p>This talk explores the application of a data-driven neural network approach for international diversification of investment portfolios, particularly for Australian investors. We consider a portfolio construction that includes stock and bond indices from both Australian and American markets, optimizing diversified rebalancing strategies to identify the most effective asset allocation.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Haoyu Wang</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Contraction into disjoint clusters in an active gel model for actomyosin networks</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Collaborator: Dietmar Oelz &bull; UQ</p>
+            <p>We demonstrate that a minimal mathematical model for viscous active gels explains the formation of disjoint clusters such as those observed during the contraction of reconstituted actomyosin networks. In d dimensions, we obtain closed-form expressions for the gel density profiles of cluster solutions which vanish outside intervals of finite length.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Jamintha Samarakoon</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Adaptive Simulated Annealing for Autonomous Labour Market Delimitation</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Supervisors: A/Prof Gentry White, A/Prof Helen Thompson &bull; QUT</p>
+            <p>We developed the Adaptive Simulated Annealing for Autonomous Labour Market Delimitation (AdSA-ALMD) algorithm. This method preserves labour market boundaries by reducing variance in solutions, minimising misallocations, and dynamically identifying suitable threshold values. Results demonstrate that AdSA-ALMD outperforms existing methods in terms of consistency and reducing misallocations.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Jonathan Wilton</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Robust Loss Functions for Training Decision Tree Classifiers with Noisy Labels</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Supervisors: Dr Nan Ye, Dr Miao Xu, Dr Abigail Koay &bull; UQ</p>
+            <p>We found that common robust loss functions for classification are generally ineffective when used with decision trees, as they often result in overly aggressive early stopping and underfitting. To address this limitation, we introduce a novel loss function -- the negative exponential loss -- designed to mitigate underfitting while preserving robustness against noisy labels.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Jordan Holdorf</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">A Spatio-Temporal Framework for Financially Viable Restoration Under Climate Uncertainty</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Supervisors: Melanie Roberts, Ivan Diaz-Rainey, Chris Brown &bull; Griffith University</p>
+            <p>We extend a temporal optimisation framework to a spatio-temporal setting, incorporating site-specific factors including restoration costs, carbon sequestration rates, and exposure to stochastic climate events. Results show that accounting for spatial heterogeneity and climate uncertainty can shift restoration priorities, alter adaptive strategies over time, and ultimately influence projects' financial and environmental viability.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Joshua Peters</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Jumping for diffusion in random metastable systems</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">UQ</p>
+            <p>This work investigates fluctuations in a class of random dynamical systems, arising from randomly perturbing a piecewise smooth expanding interval map with more than one invariant subinterval. We show that the distributions of jumps of a time-homogeneous Markov chain approximate the distributions of jumps for random metastable systems.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Llewyn Randall</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Amphitheatre gully erosion modelled with coupled hydrology and sediment transport</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Supervisors: Dr Melanie Roberts, Dr Nathan Garland, Dr Brendan Roddy &bull; Griffith University</p>
+            <p>Gully erosion is a major source of sediment pollution in coastal ecosystems like the Great Barrier Reef. I present a new event-based model that couples conservative hydrology, sediment transport, and changes in gully geometry equations, with insight into the profiling of sediment sources and sinks in large gullies.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Luke Filippini</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Analysis of transition probabilities for stochastic models of anisotropic diffusion</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Supervisors: Dr Elliot Carr, Dr Adrianne Jenner &bull; QUT</p>
+            <p>We discuss methods for deriving and obtaining transition probabilities for on-lattice stochastic models of anisotropic particle diffusion, motivated by potential applications to neurological diseases and disorders. We derive transition probabilities from a finite volume discretisation of the diffusion equation on a rectangular lattice and two hexagonal lattice configurations.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Mason Lacy</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Importance of spatial arrangement and growth factor secretion for T cell expansion</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Supervisors: Dr Adrianne Jenner, A/Prof Pascal Buenzli &bull; QUT</p>
+            <p>A stochastic agent-based model is used to model T cell expansion in micro-rod scaffolds. The model includes activation and expansion of T cells through interactions between T cells and micro-rods and reproduces key features observed in laboratory experiments. These models are used to inform alterations to micro-rods that will likely improve the speed and efficiency of T cell expansion for adoptive cell therapy.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Mitchell Griggs</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Simulating Higher-Order Solutions for Stochastic Equations with Indivisible Delays</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Supervisors: Pamela Burrage, Kevin Burrage &bull; QUT</p>
+            <p>The Milstein scheme becomes significantly more complicated when indivisible delays are included, and a simulation method for this is not yet known. In this talk, I will explain the cause of this complication, as well as present my simulation technique.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Nina Rynne</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Optimal Control Modelling of Carbon Abatement Strategies</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Supervisors: Ryan Heneghan, Melanie Roberts, Michael Bode &bull; Griffith University</p>
+            <p>This talk presents a novel optimal control framework for analysing the interaction between emissions reduction and carbon dioxide removal strategies in climate mitigation. Our approach employs Pontryagin's maximum principle to establish a rigorous mathematical foundation for determining optimal intervention sequences.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Obi Carwood</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Mathematical Modelling of Drug Release from Functionally-Graded-Delivery Systems</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Supervisors: Drs Elliot Carr and David Warne &bull; QUT</p>
+            <p>We consider radially symmetric geometries that utilise functionally-graded-materials such that our model's diffusivity and reaction-rate parameters are spatially varying. We develop closed-form semi-analytical expressions that solve the total fraction of drug released, yielding release profiles for each geometry dimension and coating type.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Patrick Grant</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Modelling Moisture Migration and Swelling in Engineered Wood Products</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Supervisors: Ian Turner, Steven Psaltis, Maryam Shirmohammadi &bull; QUT</p>
+            <p>We focus on cross laminated timber EWPs. Timber swells as it takes on moisture, which can cause internal stresses. In an EWP, moisture migration can induce a shear stress along the glue line, particularly if one board is wet and swelling while the other remains dry, potentially resulting in delamination -- a severe structural failure.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Renee Oldfield</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Average entropy for random Blaschke products</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Supervisor: Cecilia Gonzalez-Tokman &bull; UQ</p>
+            <p>We consider the measure theoretic entropy of random Blaschke products, and show that the average entropy for a family of expanding on average random Blaschke products can be obtained from the derivative of the maps.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Riley Whebell</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Image-based homogenisation for a multiscale model of sugarcane bagasse pretreatment</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Collaborators: Ian Turner, Elliot Carr &bull; QUT</p>
+            <p>We use microCT imaging to reveal bagasse microstructures in 3D and compute effective material properties throughout the particle. We also propose a spectral clustering strategy to group similar regions together, showing the clustering separates visibly distinct regions and that the error incurred is small.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Ryan Kelly</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Misspecification-robust methods for SBI</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Supervisors: Chris Drovandi, David Warne &bull; QUT</p>
+            <p>I present recent work on developing approaches that are robust to misspecification in simulation-based inference, drawing on ideas from approximate Bayesian computation and generalised Bayesian inference, specifically focusing on robust summaries, the choice of a robust loss function, and error modelling.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">S M Erfanul Kabir Chowdhury</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">A sub-diffusive approach to diffusion MRI in white matter</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Supervisors: Dr. Qianqian Yang, Dr. Timothy Moroney, Dr. Adrianne Jenner &bull; QUT</p>
+            <p>We propose a novel sub-diffusive difference model based on a fractional-order mathematical framework to characterize the microstructure of white matter. The model incorporates both two- and three-compartment axon configurations, enabling effective separation of the extra-cellular space signal from intra-cellular contributions.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Sarah Vollert</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Calibrating ecosystem models when data is scarce</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Supervisors: Chris Drovandi, Cailan Jeynes-Smith, Luz Pascal, Matthew Adams &bull; QUT</p>
+            <p>We develop a Bayesian framework for calibrating ecosystem models to any known non-empirical features of the species populations -- such as limits to population sizes and rates of change, known responses to conservation, or theoretical properties such as stable coexistence. We demonstrate that where ecological datasets are limited, non-empirical knowledge can supplement data, leading to better ecosystem models and predictions.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Shahak Kuba</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Bones, why is their growth so wacky?</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Supervisors: Pascal R. Buenzli, Matthew J. Simpson &bull; QUT</p>
+            <p>We present a stochastic, cell-based mathematical model of osteoblast forming new bone tissue to explore how the rate and pattern of bone tissue growth depends on osteoblast cell-cell mechanical interactions and the stochastic embedment of osteoblasts into newly formed bone tissue. Our model effectively replicates two key phenomena: the smoothing of resorption cavities and the slowdown of new tissue deposition.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Sishou Zhou</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Improving sub-diffusion dMRI model parameter estimation using PINNs</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Supervisors: Qianqian Yang, Timothy Moroney, David Warne &bull; QUT</p>
+            <p>We present a novel PINN framework to enhance the accuracy and efficiency of parameter estimation in the sub-diffusion model for dMRI data, leading to more precise parameter maps of the brain.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Sithara Wijekoon</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Missing Data Imputation Based on Conditional Sampling from Vine Copulas</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Supervisors: A/Prof. Gentry White, Edwin Lu, A/Prof. Helen Thompson &bull; QUT</p>
+            <p>We propose an imputation method using C-vines and D-vines that preserves dependencies among continuous variables and specifically addresses non-monotone missing patterns. Results show that our approach outperforms comparative methods, including predictive mean matching and other copula-based imputation methods.</p>
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <summary class="flex items-center gap-3 px-5 py-4 hover:bg-gray-50 transition">
+            <svg class="w-4 h-4 text-gray-400 chevron shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="min-w-0">
+              <span class="font-semibold text-gray-900">Stephen Sanderson</span>
+              <span class="text-gray-400 mx-2">&ndash;</span>
+              <span class="text-gray-600">Prediction of nonequilibrium response from equilibrium dynamics</span>
+            </div>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-gray-100 mt-0 pt-4">
+            <p class="text-xs text-gray-500 mb-2">Collaborators: Caius Robertson, Debra J. Bernhardt &bull; UQ</p>
+            <p>This presentation shows examples of how response theory can be used to predict the entire linear response regime of a nonequilibrium system using only equilibrium simulations, thereby avoiding the need for multiple nonequilibrium simulations under different field strengths.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-sky-950 text-sky-200 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <img src="../../assets/logo-icon.svg" alt="QANZIAM" class="h-8 w-8 brightness-200">
+          <span class="font-bold text-white">QANZIAM</span>
+          <span class="text-sky-400">|</span>
+          <span class="text-sm">Queensland Branch of ANZIAM</span>
+        </div>
+        <div class="text-sm text-sky-400">
+          &copy; 2026 ANZIAM Queensland Branch
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+  </script>
+</body>
+</html>
