@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rules &amp; Documents - ANZIAM Queensland Branch</title>
+  <meta name="description" content="Official rules and formal documents of the ANZIAM Queensland Branch.">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+  <link rel="shortcut icon" href="../assets/favicon.ico">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :target { scroll-margin-top: 5rem; }
+    #mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; }
+    #mobile-menu.hidden { max-height: 0; opacity: 0; overflow: hidden; }
+    #mobile-menu:not(.hidden) { max-height: 500px; opacity: 1; }
+  </style>
+</head>
+
+<body class="font-sans text-gray-800 bg-white">
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="../index.html" class="flex items-center gap-3 shrink-0">
+          <img src="../assets/ANZIAM_logo.png" alt="ANZIAM" class="h-10 w-10">
+          <div class="hidden sm:block">
+            <span class="font-bold text-sky-900 text-lg leading-tight block">ANZIAM</span>
+            <span class="text-xs text-sky-700">Queensland Branch</span>
+          </div>
+        </a>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="../index.html" class="px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50 transition">Home</a>
+          <a href="../index.html#about" class="px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50 transition">About</a>
+          <a href="../index.html#events" class="px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50 transition">Events</a>
+          <a href="../index.html#committee" class="px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50 transition">Committee</a>
+          <a href="../index.html#connect" class="px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50 transition">Connect</a>
+        </div>
+        <button id="menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition" aria-label="Toggle menu">
+          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <a href="../index.html" class="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50">Home</a>
+        <a href="../index.html#about" class="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50">About</a>
+        <a href="../index.html#events" class="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50">Events</a>
+        <a href="../index.html#committee" class="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50">Committee</a>
+        <a href="../index.html#connect" class="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50">Connect</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <header class="bg-sky-900 text-white pt-28 pb-12 sm:pt-36 sm:pb-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <a href="../index.html#about" class="inline-flex items-center text-sky-300 hover:text-sky-200 text-sm mb-4 transition">
+        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Back to about
+      </a>
+      <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-4">
+        Rules &amp; Documents
+      </h1>
+      <p class="text-lg text-sky-200 max-w-2xl">
+        Official rules and formal documents of the ANZIAM Queensland Branch.
+      </p>
+    </div>
+  </header>
+
+  <!-- ==================== ANNUAL REPORTS ==================== -->
+  <section class="py-12 sm:py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl font-bold text-sky-900 mb-6">Annual Reports</h2>
+      <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+        <ul class="divide-y divide-gray-100">
+          <li class="flex items-center justify-between p-5 transition">
+            <div class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-sky-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <span class="font-medium text-gray-900">Annual Report 2025</span>
+            </div>
+            <a href="annual_report_2025.pdf" class="text-sm text-sky-700 font-medium hover:underline">Download PDF</a>
+          </li>
+          <li class="flex items-center justify-between p-5 transition">
+            <div class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-sky-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <span class="font-medium text-gray-900">Annual Report 2026</span>
+            </div>
+            <a href="annual_report_2026.pdf" class="text-sm text-sky-700 font-medium hover:underline">Download PDF</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BRANCH RULES ==================== -->
+  <section class="py-12 sm:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl font-bold text-sky-900 mb-2">ANZIAM Queensland Branch &ndash; Rules</h2>
+      <p class="text-sm text-gray-500 mb-8">Updated: 28 October 2020</p>
+
+      <!-- I. Introduction -->
+      <div class="mb-10">
+        <h3 class="text-lg font-bold text-sky-800 mb-4">I. Introduction</h3>
+        <div class="bg-white border border-gray-100 rounded-2xl shadow-sm p-6">
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">1.</span> The following Rules are to be read in conjunction with the constitution of the Australian Mathematical Society, in sequel to be referred to as the Society, and the constitution of the Division of Applied Mathematics of the Australian Mathematical Society, in sequel to be referred to as the Division.</p>
+        </div>
+      </div>
+
+      <!-- II. Name, Objects and Composition of the Branch -->
+      <div class="mb-10">
+        <h3 class="text-lg font-bold text-sky-800 mb-4">II. Name, Objects and Composition of the Branch</h3>
+        <div class="bg-white border border-gray-100 rounded-2xl shadow-sm p-6 space-y-5">
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">2.</span> The branch shall be called the <em>Queensland Branch of the Division of Applied Mathematics of the Australian Mathematical Society</em>, hereafter to be referred to as the Branch.</p>
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">3.</span> The objects of the Branch shall be as for the Division.</p>
+          <div class="text-gray-700 leading-relaxed">
+            <p><span class="font-semibold text-gray-900">4.</span> The Branch shall consist of four classes of Members, namely</p>
+            <ol class="list-decimal list-inside ml-4 mt-2 space-y-2">
+              <li>Honorary Members, who shall be Honorary Members of the Society;</li>
+              <li>Ordinary Members, who shall be those Ordinary Members of the Society usually resident in Queensland who pay an annual capitation fee to the Division;</li>
+              <li>Institution Members, who shall be those Institutional Members of the Society resident in Queensland who pay an annual capitation fee to the Division;</li>
+              <li>Associate Members, who shall be those persons who are not members of the Society but who elect to pay an annual membership fee to the Branch, the amount thereof to be determined from time to time by the Branch but in all cases to be not less than the capitation fee paid by Ordinary Members as prescribed in Rule 4(b).</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- III. Officers and Executive Committee -->
+      <div class="mb-10">
+        <h3 class="text-lg font-bold text-sky-800 mb-4">III. Officers and Executive Committee</h3>
+        <div class="bg-white border border-gray-100 rounded-2xl shadow-sm p-6 space-y-5">
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">5.</span> The Officers of the Branch shall be Ordinary Members of the Branch. The Executive Committee shall be Members of the Branch (other than Institutional Members), the composition of the Committee to be subject to the provisions of Paragraph 7.</p>
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">6.</span> The Officers of the Branch shall be a Chair, a Secretary and a Treasurer.</p>
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">7.</span> The Executive Committee of the Branch shall consist of the Officers abovementioned and not more than four further elected Members who shall be called Ordinary Members of the Executive Committee. At least half of the Ordinary Members of the Executive Committee shall be Ordinary Members of the Branch. The Chair of the Division or their nominee shall be an ex officio member of the Executive Committee.</p>
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">8.</span> The Executive Committee shall manage the business of the Branch and shall act to further the objects of the Branch.</p>
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">9.</span> The Chair or their nominee shall preside at all meetings of the Executive Committee. Three members of the Executive Committee shall constitute a quorum.</p>
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">10.</span> The Secretary shall keep a record of the activities of the Branch and of the Executive Committee, shall be responsible for the conduct of Ballots, and shall do all such things for the use and service of the Branch as appertains to their office. They shall annually prepare a written report on the activities of the Branch for the Executive Committees of the Branch and the Division.</p>
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">11.</span> The Treasurer shall collect and receive all funds on account of the Branch and shall deposit the same in an interest bearing Society Account established in the name of the Branch. Payments from this Account shall be made by cheques signed by the Treasurer and one other person nominated by the Committee or an electronic financial transaction that is approved by email or other accepted electronic means. The Treasurer shall keep true accounts of the sums of money received and expended by the Branch and shall annually prepare a financial statement for the Executive Committees of the Branch and the Division. The annual financial statement shall be made available to any Member of the Branch on request.</p>
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">12.</span> All members of the Executive Committee shall act in an honorary capacity.</p>
+        </div>
+      </div>
+
+      <!-- IV. Meetings -->
+      <div class="mb-10">
+        <h3 class="text-lg font-bold text-sky-800 mb-4">IV. Meetings</h3>
+        <div class="bg-white border border-gray-100 rounded-2xl shadow-sm p-6 space-y-5">
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">13.</span> The Executive Committee of the Branch shall organize as it sees fit such meetings, conferences and seminars in furtherance of the objects of the Branch.</p>
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">14.</span> Where fees are to be charged to cover expenses involved in the organization and conduct of such meetings, conferences and seminars, Members of the Branch may pay a discounted fee as determined by the Executive Committee.</p>
+        </div>
+      </div>
+
+      <!-- V. Ballots and Elections -->
+      <div class="mb-10">
+        <h3 class="text-lg font-bold text-sky-800 mb-4">V. Ballots and Elections</h3>
+        <div class="bg-white border border-gray-100 rounded-2xl shadow-sm p-6 space-y-5">
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">15.</span> Positions on the Executive Committee shall be declared vacant each calendar year.</p>
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">16.</span> The Executive Committee of the Branch shall be elected annually by Members of the Branch other than Institutional Members.</p>
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">17.</span> A Ballot for the abovementioned positions shall be conducted at the Annual General Meeting (AGM) of the Branch, the Returning Officer to be appointed by the Executive Committee.</p>
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">18.</span> The Returning Officer shall notify in writing each Member of the Branch of the call for nominations for Officers and Ordinary Members of the Executive Committee; this notification shall be given at least two weeks prior to the AGM of the Branch.</p>
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">19.</span> Nominations for any or all of the Officers and Seats to be filled may be made by any Member who is entitled to vote at the ensuing election, provided that the persons nominated are entitled to vote at the ensuing election and that the nominations are received by the Returning Officer prior to or at the Branch AGM. Nominations from the floor at the AGM are valid.</p>
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">20.</span> The protocol for the operation of all Branch Ballots and elections shall be approved by the Executive Committee.</p>
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">21.</span> Each Member who is entitled to vote shall have just one vote in respect of each office and each seat to be filled.</p>
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">22.</span> The Member who receives the highest number of votes for each single Office shall be declared elected, and those Members who receive the (up to) four highest number of votes for Ordinary Members of the Executive Committee shall be declared elected.</p>
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">23.</span> If, for any reason, a Branch AGM is not held in a calendar year, the Returning Officer shall conduct an electronic Ballot.</p>
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">24.</span> Persons elected as Officers or Ordinary Members of the Executive Committee shall normally take up their respective positions immediately following the AGM or electronic Ballot.</p>
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">25.</span> The Executive Committee shall decide whether to fill casual vacancies on the Committee should they occur. Such vacancies shall be filled by appointment by the Committee.</p>
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">26.</span> In the extraordinary case where no election of Officers or Ordinary Members to the Executive Committee has taken place by the commencement of the Annual Conference of the Division, the Executive Committee of the Division shall intervene and take whatever action it deems appropriate.</p>
+        </div>
+      </div>
+
+      <!-- VI. Amendment to Rules -->
+      <div class="mb-10">
+        <h3 class="text-lg font-bold text-sky-800 mb-4">VI. Amendment to Rules</h3>
+        <div class="bg-white border border-gray-100 rounded-2xl shadow-sm p-6">
+          <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">27.</span> Any question concerning an alteration of this set of Rules of Procedure shall be decided by a special Ballot.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-sky-950 text-sky-200 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <img src="../assets/ANZIAM_logo.png" alt="ANZIAM" class="h-8 w-8 brightness-200">
+          <span class="font-bold text-white">ANZIAM Queensland Branch</span>
+          <span class="text-sky-400">|</span>
+          <span class="text-sm">Queensland Branch of ANZIAM</span>
+        </div>
+        <div class="text-sm text-sky-400">
+          &copy; 2026 ANZIAM Queensland Branch
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+  </script>
+</body>
+</html>

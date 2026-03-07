@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Past Conferences - ANZIAM Queensland Branch</title>
+  <meta name="description" content="Archive of QANZIAM conferences from 1998 to present.">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+  <link rel="shortcut icon" href="../assets/favicon.ico">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :target { scroll-margin-top: 5rem; }
+    #mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; }
+    #mobile-menu.hidden { max-height: 0; opacity: 0; overflow: hidden; }
+    #mobile-menu:not(.hidden) { max-height: 500px; opacity: 1; }
+  </style>
+</head>
+
+<body class="font-sans text-gray-800 bg-white">
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="../index.html" class="flex items-center gap-3 shrink-0">
+          <img src="../assets/ANZIAM_logo.png" alt="ANZIAM" class="h-10 w-10">
+          <div class="hidden sm:block">
+            <span class="font-bold text-sky-900 text-lg leading-tight block">ANZIAM</span>
+            <span class="text-xs text-sky-700">Queensland Branch</span>
+          </div>
+        </a>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="../index.html" class="px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50 transition">Home</a>
+          <a href="../index.html#about" class="px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50 transition">About</a>
+          <a href="../index.html#events" class="px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50 transition">Events</a>
+          <a href="../index.html#committee" class="px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50 transition">Committee</a>
+          <a href="../index.html#connect" class="px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50 transition">Connect</a>
+        </div>
+        <button id="menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition" aria-label="Toggle menu">
+          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <a href="../index.html" class="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50">Home</a>
+        <a href="../index.html#about" class="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50">About</a>
+        <a href="../index.html#events" class="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50">Events</a>
+        <a href="../index.html#committee" class="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50">Committee</a>
+        <a href="../index.html#connect" class="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50">Connect</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="bg-sky-900 text-white pt-28 pb-12 sm:pt-36 sm:pb-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <a href="../index.html#events" class="inline-flex items-center text-sky-300 hover:text-sky-200 text-sm mb-4 transition">
+        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Back to events
+      </a>
+      <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight">Past Conferences</h1>
+      <p class="text-sky-200 mt-3 max-w-2xl">The QANZIAM conference has been held annually since 1998, rotating between Queensland universities and venues.</p>
+    </div>
+  </header>
+
+  <!-- ==================== CONTENT ==================== -->
+  <section class="py-12 sm:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+
+      <!-- Recent conferences with detailed records -->
+      <h2 class="text-lg font-semibold text-gray-400 uppercase tracking-wide mb-6">Recent Conferences</h2>
+      <div class="space-y-4 mb-14">
+
+        <a href="conference_2025/" class="flex items-center justify-between bg-white border border-gray-100 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition group">
+          <div>
+            <div class="flex items-center gap-3 mb-1">
+              <span class="text-2xl font-bold text-sky-900">2025</span>
+              <span class="inline-block px-2 py-0.5 text-xs font-semibold bg-sky-100 text-sky-800 rounded">Full programme</span>
+            </div>
+            <p class="text-sm text-gray-600">Queensland University of Technology &mdash; 3 June</p>
+          </div>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-sky-600 transition shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="QANZIAM2024Booklet.pdf" target="_blank" rel="noopener" class="flex items-center justify-between bg-white border border-gray-100 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition group">
+          <div>
+            <div class="flex items-center gap-3 mb-1">
+              <span class="text-2xl font-bold text-sky-900">2024</span>
+              <span class="inline-block px-2 py-0.5 text-xs font-semibold bg-gray-100 text-gray-600 rounded">PDF booklet</span>
+            </div>
+            <p class="text-sm text-gray-600">University of Queensland &mdash; 6 June</p>
+          </div>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-sky-600 transition shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="QANZIAM2023Booklet.pdf" target="_blank" rel="noopener" class="flex items-center justify-between bg-white border border-gray-100 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition group">
+          <div>
+            <div class="flex items-center gap-3 mb-1">
+              <span class="text-2xl font-bold text-sky-900">2023</span>
+              <span class="inline-block px-2 py-0.5 text-xs font-semibold bg-gray-100 text-gray-600 rounded">PDF booklet</span>
+            </div>
+            <p class="text-sm text-gray-600">Griffith University &mdash; 29 June</p>
+          </div>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-sky-600 transition shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="QANZIAM2022Booklet.pdf" target="_blank" rel="noopener" class="flex items-center justify-between bg-white border border-gray-100 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition group">
+          <div>
+            <div class="flex items-center gap-3 mb-1">
+              <span class="text-2xl font-bold text-sky-900">2022</span>
+              <span class="inline-block px-2 py-0.5 text-xs font-semibold bg-gray-100 text-gray-600 rounded">PDF booklet</span>
+            </div>
+            <p class="text-sm text-gray-600">Queensland University of Technology &mdash; 15 June</p>
+          </div>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-sky-600 transition shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="QANZIAM2021Booklet.pdf" target="_blank" rel="noopener" class="flex items-center justify-between bg-white border border-gray-100 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition group">
+          <div>
+            <div class="flex items-center gap-3 mb-1">
+              <span class="text-2xl font-bold text-sky-900">2021</span>
+              <span class="inline-block px-2 py-0.5 text-xs font-semibold bg-gray-100 text-gray-600 rounded">PDF booklet</span>
+            </div>
+            <p class="text-sm text-gray-600">University of Queensland &mdash; 4 November</p>
+          </div>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-sky-600 transition shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="QANZIAM2019Booklet.pdf" target="_blank" rel="noopener" class="flex items-center justify-between bg-white border border-gray-100 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition group">
+          <div>
+            <div class="flex items-center gap-3 mb-1">
+              <span class="text-2xl font-bold text-sky-900">2019</span>
+              <span class="inline-block px-2 py-0.5 text-xs font-semibold bg-gray-100 text-gray-600 rounded">PDF booklet</span>
+            </div>
+            <p class="text-sm text-gray-600">University of Queensland &mdash; 4 June</p>
+          </div>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-sky-600 transition shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+
+      </div>
+
+      <!-- Earlier conferences -->
+      <h2 class="text-lg font-semibold text-gray-400 uppercase tracking-wide mb-6">Earlier Conferences</h2>
+      <div class="bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden">
+        <table class="w-full text-sm">
+          <tbody>
+            <tr class="border-b border-gray-50">
+              <td class="px-5 py-3 font-bold text-sky-900 w-16">2015</td>
+              <td class="px-5 py-3 text-gray-600">University of Queensland &mdash; 25 November</td>
+            </tr>
+            <tr class="border-b border-gray-50 bg-gray-50/50">
+              <td class="px-5 py-3 font-bold text-sky-900">2013</td>
+              <td class="px-5 py-3 text-gray-600">Robertson Gardens, Brisbane &mdash; 30 October</td>
+            </tr>
+            <tr class="border-b border-gray-50">
+              <td class="px-5 py-3 font-bold text-sky-900">2012</td>
+              <td class="px-5 py-3 text-gray-600">Ivory Palms Resort, Noosaville &mdash; 27&ndash;29 October</td>
+            </tr>
+            <tr class="border-b border-gray-50 bg-gray-50/50">
+              <td class="px-5 py-3 font-bold text-sky-900">2011</td>
+              <td class="px-5 py-3 text-gray-600">Comfort Inn Grammar View, Toowoomba &mdash; 10&ndash;11 September</td>
+            </tr>
+            <tr class="border-b border-gray-50">
+              <td class="px-5 py-3 font-bold text-sky-900">2010</td>
+              <td class="px-5 py-3 text-gray-600">Gympie Conference Centre &mdash; 23&ndash;24 October</td>
+            </tr>
+            <tr class="border-b border-gray-50 bg-gray-50/50">
+              <td class="px-5 py-3 font-bold text-sky-900">2009</td>
+              <td class="px-5 py-3 text-gray-600">Boonah Valley Motel &mdash; 24&ndash;25 October</td>
+            </tr>
+            <tr class="border-b border-gray-50">
+              <td class="px-5 py-3 font-bold text-sky-900">2008</td>
+              <td class="px-5 py-3 text-gray-600">St Bernard's Hotel, Mt Tamborine &mdash; 18&ndash;19 October</td>
+            </tr>
+            <tr class="border-b border-gray-50 bg-gray-50/50">
+              <td class="px-5 py-3 font-bold text-sky-900">2007</td>
+              <td class="px-5 py-3 text-gray-600">Rydges Oasis Resort, Caloundra &mdash; 20&ndash;21 October</td>
+            </tr>
+            <tr class="border-b border-gray-50">
+              <td class="px-5 py-3 font-bold text-sky-900">2006</td>
+              <td class="px-5 py-3 text-gray-600">Murray Gardens, Stanthorpe &mdash; 9&ndash;10 September</td>
+            </tr>
+            <tr class="border-b border-gray-50 bg-gray-50/50">
+              <td class="px-5 py-3 font-bold text-sky-900">2005</td>
+              <td class="px-5 py-3 text-gray-600">Novotel, Brisbane &mdash; 12 November</td>
+            </tr>
+            <tr class="border-b border-gray-50">
+              <td class="px-5 py-3 font-bold text-sky-900">2004</td>
+              <td class="px-5 py-3 text-gray-600">Seagulls Resort, Townsville &mdash; 27&ndash;28 September</td>
+            </tr>
+            <tr class="border-b border-gray-50 bg-gray-50/50">
+              <td class="px-5 py-3 font-bold text-sky-900">2003</td>
+              <td class="px-5 py-3 text-gray-600">Anchorage Resort, Stradbroke Island &mdash; 6&ndash;7 September</td>
+            </tr>
+            <tr class="border-b border-gray-50">
+              <td class="px-5 py-3 font-bold text-sky-900">2002</td>
+              <td class="px-5 py-3 text-gray-600">Burleigh Heads, Gold Coast &mdash; 17&ndash;18 August</td>
+            </tr>
+            <tr class="border-b border-gray-50 bg-gray-50/50">
+              <td class="px-5 py-3 font-bold text-sky-900">2000</td>
+              <td class="px-5 py-3 text-gray-600">Noosa Lakes Resort, Sunshine Coast &mdash; 19&ndash;20 August</td>
+            </tr>
+            <tr class="border-b border-gray-50">
+              <td class="px-5 py-3 font-bold text-sky-900">1999</td>
+              <td class="px-5 py-3 text-gray-600">Mt Tamborine, inland from Surfers Paradise</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-bold text-sky-900">1998</td>
+              <td class="px-5 py-3 text-gray-600">Alexandra Headlands, Sunshine Coast</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-sky-950 text-sky-200 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <img src="../assets/ANZIAM_logo.png" alt="ANZIAM" class="h-8 w-8 brightness-200">
+          <span class="font-bold text-white">ANZIAM Queensland Branch</span>
+          <span class="text-sky-400">|</span>
+          <span class="text-sm">Queensland Branch of ANZIAM</span>
+        </div>
+        <div class="text-sm text-sky-400">
+          &copy; 2026 ANZIAM Queensland Branch
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+  </script>
+</body>
+</html>

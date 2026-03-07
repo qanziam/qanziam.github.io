@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 QANZIAM Seminars - ANZIAM Queensland Branch</title>
+  <meta name="description" content="QANZIAM seminars for 2026, organised by Samuel Stephen.">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16x16.png">
+  <link rel="shortcut icon" href="../../assets/favicon.ico">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :target { scroll-margin-top: 5rem; }
+    .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+    .card-hover:hover { transform: translateY(-2px); box-shadow: 0 8px 25px -5px rgba(0,0,0,0.15); }
+    #mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; }
+    #mobile-menu.hidden { max-height: 0; opacity: 0; overflow: hidden; }
+    #mobile-menu:not(.hidden) { max-height: 500px; opacity: 1; }
+  </style>
+</head>
+
+<body class="font-sans text-gray-800 bg-white">
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="../../index.html" class="flex items-center gap-3 shrink-0">
+          <img src="../../assets/ANZIAM_logo.png" alt="ANZIAM" class="h-10 w-10">
+          <div class="hidden sm:block">
+            <span class="font-bold text-sky-900 text-lg leading-tight block">ANZIAM</span>
+            <span class="text-xs text-sky-700">Queensland Branch</span>
+          </div>
+        </a>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="../../index.html" class="px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50 transition">Home</a>
+          <a href="../../index.html#about" class="px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50 transition">About</a>
+          <a href="../../index.html#events" class="px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50 transition">Events</a>
+          <a href="../../index.html#committee" class="px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50 transition">Committee</a>
+          <a href="../../index.html#connect" class="px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50 transition">Connect</a>
+        </div>
+        <button id="menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition" aria-label="Toggle menu">
+          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <a href="../../index.html" class="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50">Home</a>
+        <a href="../../index.html#about" class="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50">About</a>
+        <a href="../../index.html#events" class="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50">Events</a>
+        <a href="../../index.html#committee" class="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50">Committee</a>
+        <a href="../../index.html#connect" class="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-sky-700 rounded-lg hover:bg-sky-50">Connect</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <header class="bg-sky-900 text-white pt-28 pb-12 sm:pt-36 sm:pb-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <a href="../../index.html#events" class="inline-flex items-center text-sky-300 hover:text-sky-200 text-sm mb-4 transition">
+        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Back to events
+      </a>
+      <div class="flex flex-wrap items-center gap-3 mb-4">
+        <span class="inline-block px-3 py-1 text-xs font-semibold bg-white/15 text-sky-200 rounded-full">Seminar Series</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-4">
+        QANZIAM Seminars 2026
+      </h1>
+      <p class="text-lg text-sky-200 max-w-2xl">
+        Online seminars connecting applied mathematicians across Queensland.
+      </p>
+    </div>
+  </header>
+
+  <!-- ==================== ORGANISER ==================== -->
+  <section class="py-12 sm:py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl font-bold text-sky-900 mb-6">Seminars Organisers</h2>
+      <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+        <div class="flex items-center gap-4 p-5">
+          <img src="Samuel_Stephen.png" alt="Samuel Stephen" class="w-16 h-16 rounded-full object-cover bg-sky-100 shrink-0">
+          <div>
+            <h3 class="font-bold text-gray-900">Samuel Stephen</h3>
+            <p class="text-sm text-sky-700">University of the Sunshine Coast</p>
+            <p class="text-xs text-gray-500">QANZIAM Secretary</p>
+            <p class="text-sm text-gray-600 mt-3">Got an idea for a seminar or know someone doing interesting work? We'd love to hear from you! Reach out to Samuel at <a href="mailto:sstephen3@usc.edu.au" class="text-sky-700 font-medium hover:underline">sstephen3@usc.edu.au</a> to get involved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SEMINARS ==================== -->
+  <section class="py-12 sm:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl font-bold text-sky-900 mb-8">Seminars</h2>
+
+      <div class="flex flex-col items-center justify-center text-center py-12">
+        <svg class="w-12 h-12 text-gray-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        <p class="text-gray-500 font-medium mb-1">Coming soon</p>
+        <p class="text-sm text-gray-400">Seminars for 2026 are being planned. Join the <a href="../../index.html#connect" class="text-sky-600 hover:underline">mailing list</a> to be notified.</p>
+      </div>
+
+      <!--
+      ===========================================================
+      SEMINAR TEMPLATE - Copy this block for each new seminar.
+      Paste it above this comment, inside the <div class="max-w-4xl"> container.
+      Remove the "Coming soon" placeholder above when adding the first seminar.
+      ===========================================================
+
+      <div class="bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden mb-8">
+        <div class="p-6 sm:p-8">
+
+          <div class="flex flex-wrap items-center gap-3 mb-4">
+            <span class="inline-block px-3 py-1 text-xs font-semibold bg-sky-100 text-sky-800 rounded-full">REPLACE: Date (e.g. 22 April 2026)</span>
+            <span class="inline-block px-3 py-1 text-xs font-semibold bg-gray-100 text-gray-600 rounded-full">REPLACE: Format (e.g. Online)</span>
+            <span class="inline-block px-3 py-1 text-xs font-semibold bg-emerald-100 text-emerald-700 rounded-full">REPLACE: Attendee count (e.g. 35 attendees)</span>
+          </div>
+
+          <h3 class="text-xl font-bold text-gray-900 mb-4">REPLACE: Seminar Title</h3>
+
+          <div class="flex flex-col sm:flex-row gap-4 mb-6">
+            <div class="flex items-center gap-3">
+              <img src="REPLACE_presenter_photo.jpg" alt="REPLACE: Presenter Name" class="w-12 h-12 rounded-full object-cover bg-sky-100 shrink-0">
+              <div>
+                <p class="text-sm font-semibold text-gray-900">REPLACE: Presenter Name</p>
+                <p class="text-xs text-sky-700">Presenter</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-gray-600 leading-relaxed mb-6">
+            <p>REPLACE: Seminar summary/abstract goes here.</p>
+          </div>
+
+          ** Optional: To embed a YouTube video, add this and replace VIDEO_ID:
+          <iframe width="100%" height="400" src="https://www.youtube.com/embed/VIDEO_ID"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+            gyroscope; picture-in-picture" allowfullscreen class="rounded-xl"></iframe>
+
+          ** Optional: "Video coming soon" placeholder (remove when adding the video above):
+          <div class="bg-gray-100 rounded-xl flex flex-col items-center justify-center py-12 px-6">
+            <svg class="w-12 h-12 text-gray-300 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <p class="text-sm text-gray-400 font-medium">Video coming soon</p>
+          </div>
+
+        </div>
+      </div>
+
+      ===========================================================
+      END OF TEMPLATE
+      ===========================================================
+      -->
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-sky-950 text-sky-200 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <img src="../../assets/ANZIAM_logo.png" alt="ANZIAM" class="h-8 w-8 brightness-200">
+          <span class="font-bold text-white">ANZIAM Queensland Branch</span>
+          <span class="text-sky-400">|</span>
+          <span class="text-sm">Queensland Branch of ANZIAM</span>
+        </div>
+        <div class="text-sm text-sky-400">
+          &copy; 2026 ANZIAM Queensland Branch
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+  </script>
+</body>
+</html>
