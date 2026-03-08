@@ -45,7 +45,14 @@
       50% { background-position: 100% 50%; }
     }
     .hero-gradient {
-      background: linear-gradient(135deg, #082f49 0%, #0c4a6e 25%, #075985 50%, #0369a1 75%, #0c4a6e 100%);
+      position: relative;
+      background: url('assets/SeventeenSeventyNov082024_01_CC_Hagai_Agmon-Snir.jpg') center/cover no-repeat;
+    }
+    .hero-gradient::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(8,47,73,0.85) 0%, rgba(12,74,110,0.75) 25%, rgba(7,89,133,0.7) 50%, rgba(3,105,161,0.75) 75%, rgba(12,74,110,0.85) 100%);
       background-size: 200% 200%;
       animation: gradient-shift 15s ease infinite;
     }
@@ -70,9 +77,9 @@
         <!-- Logo -->
         <a href="#" class="flex items-center gap-3 shrink-0">
           <img src="assets/ANZIAM_logo.png" alt="ANZIAM" class="h-10 w-10">
-          <div class="hidden sm:block">
-            <span class="font-bold text-sky-900 text-lg leading-tight block">ANZIAM</span>
-            <span class="text-xs text-sky-700">Queensland Branch</span>
+          <div>
+            <span class="font-bold text-sky-900 text-lg leading-tight block"><span class="sm:hidden">QANZIAM</span><span class="hidden sm:inline">ANZIAM</span></span>
+            <span class="text-xs text-sky-700 hidden sm:block">Queensland Branch</span>
           </div>
         </a>
 
@@ -108,7 +115,7 @@
 
   <!-- ==================== HERO ==================== -->
   <header class="hero-gradient text-white pt-28 pb-20 sm:pt-36 sm:pb-28">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
       <div class="max-w-3xl">
         <div class="flex items-center gap-2 mb-4">
           <span class="inline-block px-3 py-1 text-xs font-semibold bg-white/15 backdrop-blur rounded-full">Queensland Branch</span>
@@ -712,6 +719,9 @@
       </div>
       <div class="border-t border-sky-800 mt-8 pt-8 text-sm text-sky-400 text-center">
         &copy; 2026 ANZIAM Queensland Branch. Built with care for the applied mathematics community.
+      </div>
+      <div class="mt-4 text-xs text-sky-600 text-center">
+        Hero photo: Seventeen Seventy Peninsula by Hagai Agmon-Snir, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener" class="hover:text-sky-400 transition">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/w/index.php?curid=165656764" target="_blank" rel="noopener" class="hover:text-sky-400 transition">Wikimedia Commons</a>.
       </div>
     </div>
   </footer>
