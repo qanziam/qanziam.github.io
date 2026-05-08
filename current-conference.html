@@ -85,7 +85,7 @@
         Back to all events
       </a>
       <div class="flex flex-wrap items-center gap-3 mb-4">
-        <span class="inline-block px-3 py-1 text-xs font-semibold bg-emerald-500/20 text-emerald-300 rounded-full">Registration Opening Soon</span>
+        <span class="inline-block px-3 py-1 text-xs font-semibold bg-emerald-500/20 text-emerald-300 rounded-full">Registration Open</span>
         <span class="inline-block px-3 py-1 text-xs font-semibold bg-white/10 text-sky-200 rounded-full">Conference</span>
       </div>
       <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-4">
@@ -115,7 +115,7 @@
           <svg class="w-6 h-6 text-sky-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           <div>
             <div class="text-xs text-sky-300">Registration</div>
-            <div class="font-semibold text-white">$20 flat fee</div>
+            <div class="font-semibold text-white">Free!</div>
           </div>
         </div>
       </div>
@@ -168,10 +168,45 @@
             </div>
           </div>
 
+          <!-- Invited Speakers -->
+          <div id="keynotes">
+            <h2 class="text-2xl font-bold text-sky-900 mb-4">Invited Speakers</h2>
+            <div class="space-y-6">
+
+              <!-- Heneghan -->
+              <div class="bg-gray-50 rounded-2xl p-6">
+                <div class="flex flex-col sm:flex-row gap-5">
+                  <img src="assets/ryan_heneghan.jpeg" alt="Ryan Heneghan" class="w-24 h-24 sm:w-28 sm:h-28 rounded-xl object-cover bg-sky-100 shrink-0">
+                  <div>
+                    <span class="inline-block px-2.5 py-0.5 text-xs font-semibold bg-sky-100 text-sky-800 rounded mb-2">Keynote</span>
+                    <h3 class="text-xl font-bold text-gray-900 mb-1">Ryan Heneghan</h3>
+                    <p class="text-sky-700 font-medium">Reduced-complexity emulation of global marine ecosystem models</p>
+                    <p class="text-sm text-gray-500 mt-1">Griffith University</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Hickson -->
+              <div class="bg-gray-50 rounded-2xl p-6">
+                <div class="flex flex-col sm:flex-row gap-5">
+                  <img src="assets/roslyn_hickson.jpg" alt="Roslyn Hickson" class="w-24 h-24 sm:w-28 sm:h-28 rounded-xl object-cover bg-sky-100 shrink-0">
+                  <div>
+                    <span class="inline-block px-2.5 py-0.5 text-xs font-semibold bg-sky-100 text-sky-800 rounded mb-2">Keynote</span>
+                    <h3 class="text-xl font-bold text-gray-900 mb-1">Roslyn Hickson</h3>
+                    <p class="text-sky-700 font-medium">Title to be announced</p>
+                    <p class="text-sm text-gray-500 mt-1">CSIRO</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
           <!-- Schedule -->
           <div id="schedule">
-            <h2 class="text-2xl font-bold text-sky-900 mb-4">Tentative Schedule</h2>
-            <p class="text-gray-500 text-sm mb-6">Based on last year's programme. Times and session details will be confirmed closer to the event.</p>
+            <h2 class="text-2xl font-bold text-sky-900 mb-4">Schedule</h2>
+            <!-- <p class="text-gray-500 text-sm mb-6">Based on last year's programme. Times and session details will be confirmed closer to the event.</p> -->
 
             <div class="space-y-0">
               <div class="flex gap-4">
@@ -239,8 +274,8 @@
                 </div>
                 <div class="pb-8">
                   <div class="text-sm font-semibold text-sky-700">11:50 AM</div>
-                  <div class="font-semibold text-gray-900">Keynote Address</div>
-                  <p class="text-sm text-gray-500 mt-1">Invited speaker TBA.</p>
+                  <div class="font-semibold text-gray-900">Keynote: Ryan Heneghan</div>
+                  <p class="text-sm text-gray-500 mt-1">Reduced-complexity emulation of global marine ecosystem models</p>
                 </div>
               </div>
 
@@ -263,8 +298,8 @@
                 </div>
                 <div class="pb-8">
                   <div class="text-sm font-semibold text-sky-700">1:40 PM</div>
-                  <div class="font-semibold text-gray-900">Keynote Address</div>
-                  <p class="text-sm text-gray-500 mt-1">Invited speaker TBA.</p>
+                  <div class="font-semibold text-gray-900">Keynote: Roslyn Hickson</div>
+                  <p class="text-sm text-gray-500 mt-1">Title to be announced</p>
                 </div>
               </div>
 
@@ -343,7 +378,7 @@
             </div>
             <div class="flex flex-wrap items-center gap-3 text-sm">
               <span class="text-gray-500">Deadline:</span>
-              <span class="font-semibold text-sky-800 bg-sky-100 px-3 py-1 rounded-full">12 May 2026</span>
+              <span class="font-semibold text-sky-800 bg-sky-100 px-3 py-1 rounded-full">19 May 2026</span>
             </div>
           </div>
 
@@ -355,21 +390,14 @@
           <!-- Registration card -->
           <div id="register" class="bg-white border-2 border-sky-200 rounded-2xl p-6">
             <h3 class="text-lg font-bold text-sky-900 mb-4">Registration</h3>
-            <div class="space-y-3 mb-6">
-              <div class="flex justify-between items-center py-2 border-b border-gray-100">
-                <span class="text-gray-600">Everyone</span>
-                <span class="font-bold text-gray-900">$20</span>
-              </div>
-              <p class="text-xs text-gray-400">Flat fee covers catering (morning tea, lunch, afternoon tea). Registration link will be emailed to the QANZIAM mailing list soon.</p>
-            </div>
+            <p class="text-sm text-gray-600 mb-6">Free for all attendees.</p>
 
-            <a href="#" class="block w-full text-center px-6 py-3 bg-sky-700 text-white font-semibold rounded-lg hover:bg-sky-800 transition">
+            <a href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=q8h8Wtykm0-_YGZxQEmtYtl1B_Hb2ghJsOPwh6a6mRFUMUJRMzA2TFFGSVVCSUtJVFhLN1pXSkhBSi4u" class="block w-full text-center px-6 py-3 bg-sky-700 text-white font-semibold rounded-lg hover:bg-sky-800 transition">
               Register Now
             </a>
-            <p class="text-xs text-gray-400 text-center mt-3">Registration link opening soon.</p>
           </div>
 
-          <!-- Key dates -->
+          <!-- Key dates 
           <div class="bg-gray-50 rounded-2xl p-6">
             <h3 class="font-bold text-gray-900 mb-4">Key Dates</h3>
             <div class="space-y-3">
@@ -377,21 +405,21 @@
                 <div class="w-2 h-2 bg-sky-400 rounded-full mt-2 shrink-0"></div>
                 <div>
                   <div class="text-sm font-medium text-gray-900">Registration opens</div>
-                  <div class="text-xs text-gray-500">Coming soon</div>
+                  <div class="text-xs text-gray-500">Now open</div>
                 </div>
               </div>
               <div class="flex items-start gap-3">
                 <div class="w-2 h-2 bg-sky-400 rounded-full mt-2 shrink-0"></div>
                 <div>
                   <div class="text-sm font-medium text-gray-900">Abstract submission deadline</div>
-                  <div class="text-xs text-gray-500">12 May 2026</div>
+                  <div class="text-xs text-gray-500">19 May 2026</div>
                 </div>
               </div>
               <div class="flex items-start gap-3">
                 <div class="w-2 h-2 bg-sky-400 rounded-full mt-2 shrink-0"></div>
                 <div>
                   <div class="text-sm font-medium text-gray-900">Registration closes</div>
-                  <div class="text-xs text-gray-500">12 May 2026</div>
+                  <div class="text-xs text-gray-500">19 May 2026</div>
                 </div>
               </div>
               <div class="flex items-start gap-3">
@@ -410,6 +438,7 @@
               </div>
             </div>
           </div>
+          -->
 
           <!-- Contact -->
           <div class="bg-gray-50 rounded-2xl p-6">
@@ -466,8 +495,6 @@
             <span>Tue 2 June</span>
             <span class="hidden sm:inline">&middot;</span>
             <span class="hidden sm:inline">Griffith Uni, Nathan</span>
-            <span>&middot;</span>
-            <span class="font-medium">$20</span>
           </div>
         </div>
         <a href="#register" class="shrink-0 px-5 py-2.5 bg-sky-700 text-white text-sm font-semibold rounded-lg hover:bg-sky-800 transition">
